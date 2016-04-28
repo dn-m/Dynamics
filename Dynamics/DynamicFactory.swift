@@ -38,7 +38,6 @@ public class DynamicFactory {
         return Dynamic(elements: verifiedElements)!
     }
     
-    // TODO: flesh out
     private func verifyElements(elements: [DynamicElement]) throws -> [DynamicElement] {
        
         guard let (head, tail) = elements.destructured else {
