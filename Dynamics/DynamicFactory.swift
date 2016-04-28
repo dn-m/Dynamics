@@ -12,6 +12,7 @@ import StringTools
 
 public class DynamicFactory {
     
+    // TODO: refine cases
     public enum Error: ErrorType {
         case InvalidString(String)
         case Empty(String)
@@ -29,6 +30,7 @@ public class DynamicFactory {
         self.string = string
     }
     
+    // TODO: check if isVirtual
     public func makeDynamic() throws -> Dynamic {
         try ensureNotEmpty(string: string)
         let unverifiedElements = try makeUnverifiedElements(withString: string)
@@ -36,7 +38,7 @@ public class DynamicFactory {
         return Dynamic(elements: verifiedElements)!
     }
     
-    // TODO
+    // TODO: flesh out
     private func varifyElements(elements: [DynamicElement]) throws -> [DynamicElement] {
         guard let (head, tail) = elements.destructured else {
             throw Error.InvalidElements(elements.description)
@@ -77,9 +79,7 @@ public class DynamicFactory {
     
     private func makeUnverifiedElements(withString string: String) throws -> [DynamicElement] {
         let result = string.characters.flatMap { DynamicElement(rawValue: String($0)) }
-        guard result.count == string.characters.count else {
-            throw Error.InvalidString(string)
-        }
+        if result.count != string.characters.count { throw Error.InvalidString(string) }
         return result
     }
     
