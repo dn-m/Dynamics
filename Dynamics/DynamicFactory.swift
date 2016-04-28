@@ -24,18 +24,20 @@ public class DynamicFactory {
     // TODO: isVirtual
     // TODO: isSubito
 
-    private let string: String
+    private var string: String = ""
     
-    public init(string: String) {
-        self.string = string
+    public init() { }
+    
+    public func makeDynamic(withElements elements: [DynamicElement]) throws -> Dynamic {
+        let verifiedElements = try verifyElements(elements)
+        return Dynamic(verifiedElements: verifiedElements)
     }
     
     // TODO: check if isVirtual
-    public func makeDynamic() throws -> Dynamic {
+    public func makeDynamic(withString string: String) throws -> Dynamic {
         try ensureNotEmpty(string: string)
         let unverifiedElements = try makeUnverifiedElements(withString: string)
-        let verifiedElements = try verifyElements(unverifiedElements)
-        return Dynamic(elements: verifiedElements)!
+        return try makeDynamic(withElements: unverifiedElements)
     }
     
     private func verifyElements(elements: [DynamicElement]) throws -> [DynamicElement] {
@@ -66,7 +68,11 @@ public class DynamicFactory {
     }
     
     private func ensureHomogeneous(elements: [DynamicElement]) throws {
-        if elements.isHeterogeneous { throw Error.InvalidString(string) }
+        if elements.isHeterogeneous {
+            print("elements: \(elements)")
+            print("not homogeneous")
+            throw Error.InvalidString(string)
+        }
     }
     
     /*

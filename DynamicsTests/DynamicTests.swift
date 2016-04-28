@@ -14,31 +14,64 @@ class DynamicTests: XCTestCase {
     // MARK: - Init with Elements
     
     func testInitWithEmptyElements() {
-        XCTAssertNil(Dynamic(elements: []))
+        do {
+            let _ = try Dynamic(elements: [])
+            XCTFail()
+        } catch {
+            
+        }
     }
     
     func testInitWithElementsPiano() {
-        XCTAssertNotNil(Dynamic(elements: [.Piano]))
+        XCTAssertNotNil(try Dynamic(elements: [.Piano]))
     }
     
     func testInitWithElementsForte() {
-        XCTAssertNotNil(Dynamic(elements: [.Forte]))
+        XCTAssertNotNil(try Dynamic(elements: [.Forte]))
     }
     
     func testInitWithElementsNiente() {
-        XCTAssertNotNil(Dynamic(elements: [.Niente]))
+        XCTAssertNotNil(try Dynamic(elements: [.Niente]))
     }
     
     func testInitWithElementsMezzoPiano() {
-        XCTAssertNotNil(Dynamic(elements: [.Mezzo, .Piano]))
+        XCTAssertNotNil(try Dynamic(elements: [.Mezzo, .Piano]))
     }
     
     func testInitWithElementsMezzoForte() {
-        XCTAssertNotNil(Dynamic(elements: [.Mezzo, .Forte]))
+        XCTAssertNotNil(try Dynamic(elements: [.Mezzo, .Forte]))
     }
     
     func testInitWithElementsFortissimo() {
-        XCTAssertNotNil(Dynamic(elements: [.Forte, .Forte]))
+        do {
+            let _ = try Dynamic(elements: [.Forte, .Forte])
+        } catch {
+            print(error)
+            XCTFail()
+        }
+    }
+    
+    func testInitWithElementsPianissimo() {
+        do {
+            let _ = try Dynamic(elements: [.Piano, .Piano])
+        } catch {
+            print(error)
+            XCTFail()
+        }
+    }
+    
+    func testInitWithNienteFollowedByPiano() {
+        do {
+            let _ = try Dynamic(elements: [.Niente, .Piano])
+            XCTFail()
+        } catch { }
+    }
+    
+    func testInitWithNienteFollowedByForte() {
+        do {
+            let _ = try Dynamic(elements: [.Niente, .Forte])
+            XCTFail()
+        } catch { }
     }
     
     // MARK: - Init with String
@@ -62,4 +95,3 @@ class DynamicTests: XCTestCase {
         do { let _ = try Dynamic(string: "o") } catch { XCTFail() }
     }
 }
-

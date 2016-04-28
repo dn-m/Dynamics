@@ -14,14 +14,19 @@ public struct Dynamic {
     public var isVirtual: Bool = false
     private let elements: [DynamicElement]
     
-    public init?(elements: [DynamicElement]) {
-        guard elements.count > 0 else { return nil }
-        self.elements = elements
+    public init(string: String) throws {
+        self = try DynamicFactory().makeDynamic(withString: string)
     }
     
-    public init(string: String) throws {
-        self = try DynamicFactory(string: string).makeDynamic()
+    public init(elements: [DynamicElement]) throws {
+        self = try DynamicFactory().makeDynamic(withElements: elements)
     }
+    
+    internal init(verifiedElements: [DynamicElement]) {
+        self.elements = verifiedElements
+    }
+    
+    
 }
 
 extension Dynamic {
