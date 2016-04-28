@@ -23,32 +23,27 @@ class DynamicTests: XCTestCase {
     }
     
     func testInitWithElementsPiano() {
-        XCTAssertNotNil(try Dynamic(elements: [.Piano]))
+        do { let _ = try Dynamic(elements: [.Piano]) } catch { XCTFail() }
     }
     
     func testInitWithElementsForte() {
-        XCTAssertNotNil(try Dynamic(elements: [.Forte]))
+        do { let _ = try Dynamic(elements: [.Forte]) } catch { XCTFail() }
     }
     
     func testInitWithElementsNiente() {
-        XCTAssertNotNil(try Dynamic(elements: [.Niente]))
+        do { let _ = try Dynamic(elements: [.Niente]) } catch { XCTFail() }
     }
     
     func testInitWithElementsMezzoPiano() {
-        XCTAssertNotNil(try Dynamic(elements: [.Mezzo, .Piano]))
+        do { let _ = try Dynamic(elements: [.Mezzo, .Piano]) } catch { XCTFail() }
     }
     
     func testInitWithElementsMezzoForte() {
-        XCTAssertNotNil(try Dynamic(elements: [.Mezzo, .Forte]))
+        do { let _ = try Dynamic(elements: [.Mezzo, .Forte]) } catch { XCTFail() }
     }
     
     func testInitWithElementsFortissimo() {
-        do {
-            let _ = try Dynamic(elements: [.Forte, .Forte])
-        } catch {
-            print(error)
-            XCTFail()
-        }
+        do { let _ = try Dynamic(elements: [.Forte, .Forte]) } catch { XCTFail() }
     }
     
     func testInitWithElementsPianissimo() {
