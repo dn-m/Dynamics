@@ -82,8 +82,19 @@ class DynamicTests: XCTestCase {
         do { let _ = try Dynamic(string: "p") } catch { XCTFail() }
     }
     
+    func testInitWithStringPPP() {
+        do { let _ = try Dynamic(string: "ppp") } catch {
+            print(error)
+            XCTFail()
+        }
+    }
+    
     func testInitWithStringF() {
         do { let _ = try Dynamic(string: "f") } catch { XCTFail() }
+    }
+    
+    func testInitWithStringFFF() {
+        do { let _ = try Dynamic(string: "fff") } catch { XCTFail() }
     }
     
     func testInitWithStringO() {

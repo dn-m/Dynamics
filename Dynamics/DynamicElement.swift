@@ -25,9 +25,3 @@ public enum DynamicElement: String {
     //case Exclamation = "!"
     //case Subito = "sub"
 }
-
-extension DynamicElement: Equatable { }
-
-public func == (lhs: DynamicElement, rhs: DynamicElement) -> Bool {
-    return false
-}
