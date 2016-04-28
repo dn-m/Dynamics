@@ -40,29 +40,35 @@ public class DynamicFactory {
     
     // TODO: flesh out
     private func verifyElements(elements: [DynamicElement]) throws -> [DynamicElement] {
+       
         guard let (head, tail) = elements.destructured else {
-            throw Error.InvalidElements(elements.description)
+            throw Error.InvalidString(string)
         }
         
         switch head {
-        case .Mezzo:
-            guard let next = tail.first else { throw Error.InvalidString(string) }
-            switch next {
-            case .Piano, .Forte: break
-            default: throw Error.InvalidString("")
-            }
-        case .Forte: if tail.isHeterogeneous { throw Error.InvalidString(string) }
-        case .Piano: if tail.isHeterogeneous { throw Error.InvalidString(string) }
-        case .Niente:
-            if tail.first != nil { throw Error.InvalidString(string) }
-            
-        //case .S: break
-        //case .R: break
-        //case .Z: break
+        case .Mezzo: try ensureNextPianoOrForte(forElements: tail)
+        case .Forte, .Piano: try ensureHomogeneous(tail)
+        case .Niente: try ensureEmpty(elements: tail)
         }
+        
         return elements
     }
-
+    
+    private func ensureEmpty(elements elements: [DynamicElement]) throws {
+        if elements.first != nil { throw Error.InvalidString(string) }
+    }
+    
+    private func ensureNextPianoOrForte(forElements elements: [DynamicElement]) throws {
+        guard let next = elements.first else { throw Error.InvalidString(string) }
+        switch next {
+        case .Piano, .Forte: break
+        default: throw Error.InvalidString(string)
+        }
+    }
+    
+    private func ensureHomogeneous(elements: [DynamicElement]) throws {
+        if elements.isHeterogeneous { throw Error.InvalidString(string) }
+    }
     
     /*
     private func checkVirtuality(withString string: String) throws -> Bool {
