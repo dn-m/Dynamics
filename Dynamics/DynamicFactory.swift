@@ -34,12 +34,12 @@ public class DynamicFactory {
     public func makeDynamic() throws -> Dynamic {
         try ensureNotEmpty(string: string)
         let unverifiedElements = try makeUnverifiedElements(withString: string)
-        let verifiedElements = try varifyElements(unverifiedElements)
+        let verifiedElements = try verifyElements(unverifiedElements)
         return Dynamic(elements: verifiedElements)!
     }
     
     // TODO: flesh out
-    private func varifyElements(elements: [DynamicElement]) throws -> [DynamicElement] {
+    private func verifyElements(elements: [DynamicElement]) throws -> [DynamicElement] {
         guard let (head, tail) = elements.destructured else {
             throw Error.InvalidElements(elements.description)
         }
@@ -57,9 +57,9 @@ public class DynamicFactory {
         case .Piano: break
         case .Niente: break
             
-        case .S: break
-        case .R: break
-        case .Z: break
+        //case .S: break
+        //case .R: break
+        //case .Z: break
         }
         return elements
     }

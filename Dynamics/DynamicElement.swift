@@ -15,9 +15,9 @@ public enum DynamicElement: String {
     case Mezzo = "m"
     case Niente = "o"
     
-    case R = "r"
-    case S = "s"
-    case Z = "z"
+    //case R = "r"
+    //case S = "s"
+    //case Z = "z"
     
     //case ParenthesisLeft = "("
     //case ParenthesisRight = ")"
