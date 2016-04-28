@@ -46,16 +46,15 @@ public class DynamicFactory {
         
         switch head {
         case .Mezzo:
-            guard let next = tail.first else { throw Error.InvalidString("") }
+            guard let next = tail.first else { throw Error.InvalidString(string) }
             switch next {
-            case .Forte: break
-            case .Piano: break
+            case .Piano, .Forte: break
             default: throw Error.InvalidString("")
             }
-        case .Forte:
-            break
-        case .Piano: break
-        case .Niente: break
+        case .Forte: if tail.isHeterogeneous { throw Error.InvalidString(string) }
+        case .Piano: if tail.isHeterogeneous { throw Error.InvalidString(string) }
+        case .Niente:
+            if tail.first != nil { throw Error.InvalidString(string) }
             
         //case .S: break
         //case .R: break
@@ -63,8 +62,9 @@ public class DynamicFactory {
         }
         return elements
     }
-    
 
+    
+    /*
     private func checkVirtuality(withString string: String) throws -> Bool {
         guard string.characters.count > 2 else { throw Error.InvalidString(string) }
         switch string.characters.first! {
@@ -76,6 +76,7 @@ public class DynamicFactory {
         default: return false
         }
     }
+    */
     
     private func makeUnverifiedElements(withString string: String) throws -> [DynamicElement] {
         let result = string.characters.flatMap { DynamicElement(rawValue: String($0)) }
@@ -83,35 +84,7 @@ public class DynamicFactory {
         return result
     }
     
-    /*
-    private func handleMezzo(withRemainingElements elements: [DynamicElement]) throws {
-        guard let (head, tail) = elements.destructured else { throw Error.InvalidString("") }
-        guard tail.count == 0 else { throw Error.InvalidString("") }
-        switch head {
-        case .Piano:
-            // success
-        case .Forte: break // manage forte
-        default: throw Error.InvalidString("Must have 'p' or 'f' after 'm'")
-        }
-    }
-    
-    private func handleForte(withRemainingElements elements: [DynamicElement]) throws {
-        guard let head = elements.head else { throw Error.InvalidString("") }
-        // increment forte ness
-        switch head {
-        case .Forte: break
-        case .Z: break
-        default: throw Error.InvalidString("")
-        }
-    }
-    */
-    
-
-    private func ensureEmpty(string string: String) throws {
-        if string.characters.count > 0 { throw Error.InvalidString(string) }
-    }
-    
     private func ensureNotEmpty(string string: String) throws {
-        if string.characters.count == 0 { throw Error.InvalidString(string) }
+        if string.characters.count == 0 { throw Error.Empty(string) }
     }
 }
