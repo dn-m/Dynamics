@@ -68,11 +68,7 @@ public class DynamicFactory {
     }
     
     private func ensureHomogeneous(elements: [DynamicElement]) throws {
-        if elements.isHeterogeneous {
-            print("elements: \(elements)")
-            print("heterogeneous fail")
-            throw Error.InvalidString(string)
-        }
+        if elements.isHeterogeneous { throw Error.InvalidString(string) }
     }
     
     /*

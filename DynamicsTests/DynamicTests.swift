@@ -47,12 +47,7 @@ class DynamicTests: XCTestCase {
     }
     
     func testInitWithElementsPianissimo() {
-        do {
-            let _ = try Dynamic(elements: [.Piano, .Piano])
-        } catch {
-            print(error)
-            XCTFail()
-        }
+        do { let _ = try Dynamic(elements: [.Piano, .Piano]) } catch { XCTFail() }
     }
     
     func testInitWithNienteFollowedByPiano() {
