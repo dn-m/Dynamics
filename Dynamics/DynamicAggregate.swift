@@ -10,5 +10,7 @@ import Foundation
 
 public struct DynamicAggregate {
     
-    
+    private let dynamics: [Dynamic]
+    private let anteriorDynamic: Dynamic
+    private let posteriorDynamic: Dynamic
 }
