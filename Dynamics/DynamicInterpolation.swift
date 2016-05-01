@@ -19,12 +19,24 @@ public struct DynamicInterpolation {
      */
     public enum Direction {
         
+        /**
+         Crescendo.
+         */
         case Crescendo
         
+        /**
+         Decrescendo.
+         */
         case Decrescendo
         
+        /**
+         Static.
+         */
         case Static
         
+        /**
+         Create a `Direction` with `start` and `stop` `Dynamic` values.
+         */
         init(_ start: Dynamic, _ stop: Dynamic) {
             self = start == stop ? .Static : start < stop ? .Crescendo : .Decrescendo
         }
