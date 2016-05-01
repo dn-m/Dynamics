@@ -11,7 +11,7 @@ import Foundation
 /**
  Possible lowest-level elements that are aggregated into a `Dynamic` value.
  
- - TODO: Extend to include `"r"`/`"s"`/`"z"`/`"("`/`")"`/`"!"`/`"sub."`.
+ - TODO: Extend to include `"r"`,`"s"`,`"z"`,`"("`,`")"`,`"!"`,`"sub."`.
  */
 public enum DynamicElement: String {
     
