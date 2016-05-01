@@ -8,11 +8,29 @@
 
 import Foundation
 
+/**
+ Possible lowest-level elements of a `Dynamic`.
+ */
 public enum DynamicElement: String {
     
+    /**
+     Forte. Initialize with the `rawValue` `"f"`.
+     */
     case Forte = "f"
+    
+    /**
+     Piano. Initialize with the `rawValue` `"f"`.
+     */
     case Piano = "p"
+    
+    /**
+     Mezzo. Initialize with the `rawValue` `"f"`.
+     */
     case Mezzo = "m"
+    
+    /**
+     Niente. Initialize with the `rawValue` `"f"`.
+     */
     case Niente = "o"
     
     //case R = "r"

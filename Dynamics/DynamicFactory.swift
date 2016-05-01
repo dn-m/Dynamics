@@ -10,7 +10,6 @@ import Foundation
 import ArrayTools
 import StringTools
 
-
 internal class DynamicFactory {
     
     // TODO: refine cases
