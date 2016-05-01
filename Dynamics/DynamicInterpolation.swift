@@ -14,9 +14,7 @@ public struct DynamicInterpolation {
         case Crescendo, Decrescendo, Static
         
         init(_ start: Dynamic, _ stop: Dynamic) {
-            if start == stop { self = .Static }
-            else if start < stop { self = .Crescendo }
-            else { self = .Decrescendo }
+            self = start == stop ? .Static : start < stop ? .Crescendo : .Decrescendo
         }
     }
     
