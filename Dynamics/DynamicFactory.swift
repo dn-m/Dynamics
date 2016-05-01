@@ -10,10 +10,11 @@ import Foundation
 import ArrayTools
 import StringTools
 
-public class DynamicFactory {
+
+internal class DynamicFactory {
     
     // TODO: refine cases
-    public enum Error: ErrorType {
+    internal enum Error: ErrorType {
         case InvalidString(String)
         case Empty(String)
         case TooManyCharacters(String)
@@ -26,16 +27,16 @@ public class DynamicFactory {
 
     private var string: String = ""
     
-    public init() { }
+    internal init() { }
     
     // TODO: check if isVirtual
-    public func makeDynamic(withString string: String) throws -> Dynamic {
+    internal func makeDynamic(withString string: String) throws -> Dynamic {
         try ensureNotEmpty(string: string)
         let unverifiedElements = try makeUnverifiedElements(withString: string)
         return try makeDynamic(withElements: unverifiedElements)
     }
     
-    public func makeDynamic(withElements elements: [DynamicElement]) throws -> Dynamic {
+    internal func makeDynamic(withElements elements: [DynamicElement]) throws -> Dynamic {
         let verifiedElements = try verifyElements(elements)
         return Dynamic(verifiedElements: verifiedElements)
     }
