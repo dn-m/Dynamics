@@ -13,6 +13,21 @@ class DynamicInterpolationTests: XCTestCase {
 
     func testInit() {
         let i = DynamicInterpolation(from: try! Dynamic("ff"), to: try! Dynamic("pp"))
-        
+        print(i)
+    }
+    
+    func testDirectionStatic() {
+        let i = DynamicInterpolation(from: try! Dynamic("pp"), to: try! Dynamic("pp"))
+        XCTAssert(i.direction == .Static)
+    }
+    
+    func testDirectionCrescendo() {
+        let i = DynamicInterpolation(from: try! Dynamic("pp"), to: try! Dynamic("ff"))
+        XCTAssert(i.direction == .Crescendo)
+    }
+    
+    func testDirectionDecrescendo() {
+        let i = DynamicInterpolation(from: try! Dynamic("ff"), to: try! Dynamic("pp"))
+        XCTAssert(i.direction == .Decrescendo)
     }
 }
