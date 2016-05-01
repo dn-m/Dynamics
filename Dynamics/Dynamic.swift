@@ -31,7 +31,7 @@ public struct Dynamic {
      
      - throws: `DynamicFactory.Error` if a `Dynamic` cannot be created with the given `string`.
      */
-    public init(string: String) throws {
+    public init(_ string: String) throws {
         self = try DynamicFactory().makeDynamic(withString: string)
     }
     
@@ -40,7 +40,7 @@ public struct Dynamic {
     
      - throws: `DynamicFactory.Error` if a `Dynamic` cannot be create with the given `elements`.
      */
-    public init(elements: [DynamicElement]) throws {
+    public init(_ elements: [DynamicElement]) throws {
         self = try DynamicFactory().makeDynamic(withElements: elements)
     }
     

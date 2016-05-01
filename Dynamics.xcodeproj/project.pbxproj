@@ -11,6 +11,8 @@
 		0708A1FD1CD1828900CED846 /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8EDCE16135882498D6E375 /* StringTools.framework */; };
 		0708A1FE1CD1828900CED846 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB152C828B834B2C0B4E875F /* ArrayTools.framework */; };
 		0708A1FF1CD1828F00CED846 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8B387CF27BDABB52598D5D /* ArrayTools.framework */; };
+		0752A51D1CD690A7007C25AB /* DynamicInterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */; };
+		0752A51E1CD690A7007C25AB /* DynamicInterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */; };
 		0798476C1CD12462005768A0 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798476B1CD12462005768A0 /* Dynamic.swift */; };
 		0798476D1CD12462005768A0 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798476B1CD12462005768A0 /* Dynamic.swift */; };
 		0798476F1CD12473005768A0 /* DynamicAggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798476E1CD12473005768A0 /* DynamicAggregate.swift */; };
@@ -80,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicInterpolationTests.swift; path = DynamicsTests/DynamicInterpolationTests.swift; sourceTree = "<group>"; };
 		0798476B1CD12462005768A0 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dynamic.swift; path = Dynamics/Dynamic.swift; sourceTree = "<group>"; };
 		0798476E1CD12473005768A0 /* DynamicAggregate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicAggregate.swift; path = Dynamics/DynamicAggregate.swift; sourceTree = "<group>"; };
 		079847711CD1249D005768A0 /* DynamicInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicInterpolation.swift; path = Dynamics/DynamicInterpolation.swift; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 			children = (
 				E5DB23ADF46C334299395C40 /* Supporting Files */,
 				079847771CD124C4005768A0 /* DynamicTests.swift */,
+				0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */,
 			);
 			name = DynamicsTests;
 			sourceTree = "<group>";
@@ -399,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0752A51E1CD690A7007C25AB /* DynamicInterpolationTests.swift in Sources */,
 				079847791CD124C4005768A0 /* DynamicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0752A51D1CD690A7007C25AB /* DynamicInterpolationTests.swift in Sources */,
 				079847781CD124C4005768A0 /* DynamicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

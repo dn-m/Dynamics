@@ -15,7 +15,7 @@ class DynamicTests: XCTestCase {
     
     func testInitWithEmptyElements() {
         do {
-            let _ = try Dynamic(elements: [])
+            let _ = try Dynamic([])
             XCTFail()
         } catch {
             
@@ -23,43 +23,43 @@ class DynamicTests: XCTestCase {
     }
     
     func testInitWithElementsPiano() {
-        do { let _ = try Dynamic(elements: [.Piano]) } catch { XCTFail() }
+        do { let _ = try Dynamic([.Piano]) } catch { XCTFail() }
     }
     
     func testInitWithElementsForte() {
-        do { let _ = try Dynamic(elements: [.Forte]) } catch { XCTFail() }
+        do { let _ = try Dynamic([.Forte]) } catch { XCTFail() }
     }
     
     func testInitWithElementsNiente() {
-        do { let _ = try Dynamic(elements: [.Niente]) } catch { XCTFail() }
+        do { let _ = try Dynamic([.Niente]) } catch { XCTFail() }
     }
     
     func testInitWithElementsMezzoPiano() {
-        do { let _ = try Dynamic(elements: [.Mezzo, .Piano]) } catch { XCTFail() }
+        do { let _ = try Dynamic([.Mezzo, .Piano]) } catch { XCTFail() }
     }
     
     func testInitWithElementsMezzoForte() {
-        do { let _ = try Dynamic(elements: [.Mezzo, .Forte]) } catch { XCTFail() }
+        do { let _ = try Dynamic([.Mezzo, .Forte]) } catch { XCTFail() }
     }
     
     func testInitWithElementsFortissimo() {
-        do { let _ = try Dynamic(elements: [.Forte, .Forte]) } catch { XCTFail() }
+        do { let _ = try Dynamic([.Forte, .Forte]) } catch { XCTFail() }
     }
     
     func testInitWithElementsPianissimo() {
-        do { let _ = try Dynamic(elements: [.Piano, .Piano]) } catch { XCTFail() }
+        do { let _ = try Dynamic([.Piano, .Piano]) } catch { XCTFail() }
     }
     
     func testInitWithNienteFollowedByPiano() {
         do {
-            let _ = try Dynamic(elements: [.Niente, .Piano])
+            let _ = try Dynamic([.Niente, .Piano])
             XCTFail()
         } catch { }
     }
     
     func testInitWithNienteFollowedByForte() {
         do {
-            let _ = try Dynamic(elements: [.Niente, .Forte])
+            let _ = try Dynamic([.Niente, .Forte])
             XCTFail()
         } catch { }
     }
@@ -68,31 +68,31 @@ class DynamicTests: XCTestCase {
     
     func testInitWithEmptyThrows() {
         do {
-            let _ = try Dynamic(string: "")
+            let _ = try Dynamic("")
             XCTFail()
         } catch { }
     }
     
     func testInitWithStringP() {
-        do { let _ = try Dynamic(string: "p") } catch { XCTFail() }
+        do { let _ = try Dynamic("p") } catch { XCTFail() }
     }
     
     func testInitWithStringPPP() {
-        do { let _ = try Dynamic(string: "ppp") } catch {
+        do { let _ = try Dynamic("ppp") } catch {
             print(error)
             XCTFail()
         }
     }
     
     func testInitWithStringF() {
-        do { let _ = try Dynamic(string: "f") } catch { XCTFail() }
+        do { let _ = try Dynamic("f") } catch { XCTFail() }
     }
     
     func testInitWithStringFFF() {
-        do { let _ = try Dynamic(string: "fff") } catch { XCTFail() }
+        do { let _ = try Dynamic("fff") } catch { XCTFail() }
     }
     
     func testInitWithStringO() {
-        do { let _ = try Dynamic(string: "o") } catch { XCTFail() }
+        do { let _ = try Dynamic("o") } catch { XCTFail() }
     }
 }
