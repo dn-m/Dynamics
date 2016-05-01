@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- Possible lowest-level elements of a `Dynamic`.
+ Possible lowest-level elements that are aggregated into a `Dynamic` value.
  */
 public enum DynamicElement: String {
     
@@ -19,17 +19,17 @@ public enum DynamicElement: String {
     case Forte = "f"
     
     /**
-     Piano. Initialize with the `rawValue` `"f"`.
+     Piano. Initialize with the `rawValue` `"p"`.
      */
     case Piano = "p"
     
     /**
-     Mezzo. Initialize with the `rawValue` `"f"`.
+     Mezzo. Initialize with the `rawValue` `"m"`.
      */
     case Mezzo = "m"
     
     /**
-     Niente. Initialize with the `rawValue` `"f"`.
+     Niente. Initialize with the `rawValue` `"o"`.
      */
     case Niente = "o"
     
