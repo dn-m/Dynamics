@@ -53,6 +53,8 @@ public struct DynamicInterpolation {
     /// `Direction` of interpolation.
     public let direction: Direction
     
+    // TODO: public let curve (exponent) (DynamicInterpolationFunction)
+    
     // MARK: - Initializers
     
     /**
@@ -63,4 +65,6 @@ public struct DynamicInterpolation {
         self.stopDynamic = stop
         self.direction = Direction(start, stop)
     }
+    
+    // TODO: public func dynamicValueAt(proportion ? )
 }

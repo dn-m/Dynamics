@@ -56,7 +56,7 @@ internal class DynamicFactory {
     }
     
     private func ensureEmpty(elements elements: [DynamicElement]) throws {
-        if elements.first != nil { throw Error.InvalidString(string) }
+        if !elements.isEmpty { throw Error.InvalidString(string) }
     }
     
     private func ensureNextPianoOrForte(forElements elements: [DynamicElement]) throws {

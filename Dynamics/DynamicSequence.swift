@@ -8,7 +8,11 @@
 
 import Foundation
 
+// TODO: conform to SequenceType
 public struct DynamicSequence {
+    
+    // collections of both Dynamic values and DynamicInterpolation values, that can be snipped
+    // at any point
     
     
 }
