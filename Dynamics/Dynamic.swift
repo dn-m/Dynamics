@@ -28,30 +28,6 @@ public struct Dynamic {
     public init(_ elements: [Element]) {
         self.elements = elements
     }
-    
-    /*
-    /**
-     Create a `Dynamic` with a given `string` value.
-     
-     - throws: `DynamicFactory.Error` if a `Dynamic` cannot be created with the given `string`.
-     */
-    public init(_ string: String) throws {
-        self = try DynamicFactory().makeDynamic(withString: string)
-    }
-    
-    /**
-     Create a `Dynamic` with given `elements`.
-    
-     - throws: `DynamicFactory.Error` if a `Dynamic` cannot be create with the given `elements`.
-     */
-    public init(_ elements: [DynamicElement]) throws {
-        self = try DynamicFactory().makeDynamic(withElements: elements)
-    }
-    
-    internal init(verifiedElements: [DynamicElement]) {
-        self.elements = verifiedElements
-    }
-    */
 }
 
 extension Dynamic {
