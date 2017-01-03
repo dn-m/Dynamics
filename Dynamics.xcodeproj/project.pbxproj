@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00DDC023835A0B2B0479278A /* Dynamics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB6949BE5761979E81952761 /* Dynamics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		0708A1FD1CD1828900CED846 /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8EDCE16135882498D6E375 /* StringTools.framework */; };
-		0708A1FE1CD1828900CED846 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB152C828B834B2C0B4E875F /* ArrayTools.framework */; };
-		0708A1FF1CD1828F00CED846 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8B387CF27BDABB52598D5D /* ArrayTools.framework */; };
+		073F6B871E1BDFD50098AA8E /* Dynamic+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F6B861E1BDFD50098AA8E /* Dynamic+Element.swift */; };
+		073F6B881E1BDFD50098AA8E /* Dynamic+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F6B861E1BDFD50098AA8E /* Dynamic+Element.swift */; };
+		073F6B8A1E1BDFEF0098AA8E /* DynamicCluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F6B891E1BDFEF0098AA8E /* DynamicCluster.swift */; };
+		073F6B8B1E1BDFEF0098AA8E /* DynamicCluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F6B891E1BDFEF0098AA8E /* DynamicCluster.swift */; };
 		0752A51D1CD690A7007C25AB /* DynamicInterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */; };
 		0752A51E1CD690A7007C25AB /* DynamicInterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */; };
 		0798476C1CD12462005768A0 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798476B1CD12462005768A0 /* Dynamic.swift */; };
@@ -23,21 +24,14 @@
 		079847791CD124C4005768A0 /* DynamicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847771CD124C4005768A0 /* DynamicTests.swift */; };
 		0798477B1CD124D5005768A0 /* DynamicSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798477A1CD124D5005768A0 /* DynamicSequence.swift */; };
 		0798477C1CD124D5005768A0 /* DynamicSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798477A1CD124D5005768A0 /* DynamicSequence.swift */; };
-		079847811CD17514005768A0 /* DynamicElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847801CD17514005768A0 /* DynamicElement.swift */; };
-		079847821CD17514005768A0 /* DynamicElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847801CD17514005768A0 /* DynamicElement.swift */; };
 		079847841CD1763F005768A0 /* DynamicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847831CD1763F005768A0 /* DynamicFactory.swift */; };
 		079847851CD1763F005768A0 /* DynamicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847831CD1763F005768A0 /* DynamicFactory.swift */; };
-		079847871CD17848005768A0 /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808BA93320F5436B7D82C389 /* StringTools.framework */; };
 		1F1F33EA2AE816548FC2EA67 /* Dynamics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF4BADFC729B07F14AE50AF8 /* Dynamics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2141448BD780B73BA5765704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37556252B34CF6ABBFE9964B /* Foundation.framework */; };
-		2A85381B554DDAFFB421F33B /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB152C828B834B2C0B4E875F /* ArrayTools.framework */; };
 		36480E49FCF3F9612B621681 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F2AA465D724796948719 /* Cocoa.framework */; };
-		4783592A3A29160183092C2B /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808BA93320F5436B7D82C389 /* StringTools.framework */; };
 		793255E4F1D60D9079572CB7 /* Dynamics.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD4322B09224A0D65B3480C /* Dynamics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92EFE9D84A8A5237C32909D8 /* Dynamics.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD4322B09224A0D65B3480C /* Dynamics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3EF6ED1E3F95D228533FCDE /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8B387CF27BDABB52598D5D /* ArrayTools.framework */; };
 		C5C0A69D2CB6AE9CF6B7D5D1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F2AA465D724796948719 /* Cocoa.framework */; };
-		D9D8F817DB0CE7EAAE1B426B /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8EDCE16135882498D6E375 /* StringTools.framework */; };
 		DDF83BFFDE36BA5D1ED845C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37556252B34CF6ABBFE9964B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,13 +76,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		073F6B861E1BDFD50098AA8E /* Dynamic+Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dynamic+Element.swift"; path = "Dynamics/Dynamic+Element.swift"; sourceTree = "<group>"; };
+		073F6B891E1BDFEF0098AA8E /* DynamicCluster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicCluster.swift; path = Dynamics/DynamicCluster.swift; sourceTree = "<group>"; };
 		0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicInterpolationTests.swift; path = DynamicsTests/DynamicInterpolationTests.swift; sourceTree = "<group>"; };
 		0798476B1CD12462005768A0 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dynamic.swift; path = Dynamics/Dynamic.swift; sourceTree = "<group>"; };
 		0798476E1CD12473005768A0 /* DynamicAggregate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicAggregate.swift; path = Dynamics/DynamicAggregate.swift; sourceTree = "<group>"; };
 		079847711CD1249D005768A0 /* DynamicInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicInterpolation.swift; path = Dynamics/DynamicInterpolation.swift; sourceTree = "<group>"; };
 		079847771CD124C4005768A0 /* DynamicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicTests.swift; path = DynamicsTests/DynamicTests.swift; sourceTree = "<group>"; };
 		0798477A1CD124D5005768A0 /* DynamicSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicSequence.swift; path = Dynamics/DynamicSequence.swift; sourceTree = "<group>"; };
-		079847801CD17514005768A0 /* DynamicElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicElement.swift; path = Dynamics/DynamicElement.swift; sourceTree = "<group>"; };
 		079847831CD1763F005768A0 /* DynamicFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicFactory.swift; path = Dynamics/DynamicFactory.swift; sourceTree = "<group>"; };
 		2B8B387CF27BDABB52598D5D /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
 		37556252B34CF6ABBFE9964B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -101,9 +96,9 @@
 		BB152C828B834B2C0B4E875F /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
 		C621F0D0F02255531E9E07F3 /* Dynamics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dynamics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8EDCE16135882498D6E375 /* StringTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringTools.framework; path = Carthage/Build/Mac/StringTools.framework; sourceTree = "<group>"; };
-		CD221E5F8D4B18F6CAD04EDC /* DynamicsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD221E5F8D4B18F6CAD04EDC /* Dynamics macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dynamics macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4BADFC729B07F14AE50AF8 /* Dynamics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; path = Dynamics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F31A34E21E686C5250A502B1 /* DynamicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31A34E21E686C5250A502B1 /* Dynamics iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dynamics iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6949BE5761979E81952761 /* Dynamics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; path = Dynamics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,8 +108,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				36480E49FCF3F9612B621681 /* Cocoa.framework in Frameworks */,
-				D9D8F817DB0CE7EAAE1B426B /* StringTools.framework in Frameworks */,
-				2A85381B554DDAFFB421F33B /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +116,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C0A69D2CB6AE9CF6B7D5D1 /* Cocoa.framework in Frameworks */,
-				0708A1FD1CD1828900CED846 /* StringTools.framework in Frameworks */,
-				0708A1FE1CD1828900CED846 /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2141448BD780B73BA5765704 /* Foundation.framework in Frameworks */,
-				4783592A3A29160183092C2B /* StringTools.framework in Frameworks */,
-				C3EF6ED1E3F95D228533FCDE /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF83BFFDE36BA5D1ED845C8 /* Foundation.framework in Frameworks */,
-				079847871CD17848005768A0 /* StringTools.framework in Frameworks */,
-				0708A1FF1CD1828F00CED846 /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,12 +162,13 @@
 			isa = PBXGroup;
 			children = (
 				EB0B5E33334AB17700DD54B7 /* Supporting Files */,
-				079847831CD1763F005768A0 /* DynamicFactory.swift */,
 				0798476B1CD12462005768A0 /* Dynamic.swift */,
-				079847801CD17514005768A0 /* DynamicElement.swift */,
+				073F6B861E1BDFD50098AA8E /* Dynamic+Element.swift */,
+				073F6B891E1BDFEF0098AA8E /* DynamicCluster.swift */,
 				0798476E1CD12473005768A0 /* DynamicAggregate.swift */,
 				079847711CD1249D005768A0 /* DynamicInterpolation.swift */,
 				0798477A1CD124D5005768A0 /* DynamicSequence.swift */,
+				079847831CD1763F005768A0 /* DynamicFactory.swift */,
 			);
 			name = Dynamics;
 			sourceTree = "<group>";
@@ -199,9 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				C621F0D0F02255531E9E07F3 /* Dynamics.framework */,
-				F31A34E21E686C5250A502B1 /* DynamicsTests.xctest */,
+				F31A34E21E686C5250A502B1 /* Dynamics iOS Tests.xctest */,
 				9722D8959597602A47B163EF /* Dynamics.framework */,
-				CD221E5F8D4B18F6CAD04EDC /* DynamicsMacTests.xctest */,
+				CD221E5F8D4B18F6CAD04EDC /* Dynamics macOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,76 +252,76 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		119001770AFA3FB9E7B77C66 /* DynamicsTests */ = {
+		119001770AFA3FB9E7B77C66 /* Dynamics iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B9880C04E00FB21C7239180 /* Build configuration list for PBXNativeTarget "DynamicsTests" */;
+			buildConfigurationList = 9B9880C04E00FB21C7239180 /* Build configuration list for PBXNativeTarget "Dynamics iOS Tests" */;
 			buildPhases = (
 				B13B74C23049D65FFFA2A837 /* Sources */,
 				DF94D11F8D6909AA515331DA /* Frameworks */,
 				9FB7FC1CD0DF4997F13F0DFD /* CopyFiles */,
+				0CBF4E2719DCF625E8BF0C59 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				9182B0489D840F766037B5DD /* PBXTargetDependency */,
 			);
-			name = DynamicsTests;
+			name = "Dynamics iOS Tests";
 			productName = DynamicsTests;
-			productReference = F31A34E21E686C5250A502B1 /* DynamicsTests.xctest */;
+			productReference = F31A34E21E686C5250A502B1 /* Dynamics iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8219705BB7F3A24DE52EEB06 /* Dynamics */ = {
+		8219705BB7F3A24DE52EEB06 /* Dynamics iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3605CE3C8F2289E02F286DB9 /* Build configuration list for PBXNativeTarget "Dynamics" */;
+			buildConfigurationList = 3605CE3C8F2289E02F286DB9 /* Build configuration list for PBXNativeTarget "Dynamics iOS" */;
 			buildPhases = (
 				F84D7AE5F860C70BDC0880E7 /* Sources */,
 				D0D2F9AFE1F752CE2D8157F2 /* Frameworks */,
 				50B026056E51E9FD2AEA1D2C /* Headers */,
-				E6130C410CD7F017FFAA66A0 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Dynamics;
+			name = "Dynamics iOS";
 			productName = Dynamics;
 			productReference = C621F0D0F02255531E9E07F3 /* Dynamics.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		94A532E57E7B3CD9E8208112 /* DynamicsMac */ = {
+		94A532E57E7B3CD9E8208112 /* Dynamics macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC8C54728CE188CFF0FD0324 /* Build configuration list for PBXNativeTarget "DynamicsMac" */;
+			buildConfigurationList = AC8C54728CE188CFF0FD0324 /* Build configuration list for PBXNativeTarget "Dynamics macOS" */;
 			buildPhases = (
 				7651909943ACF7B99803DC66 /* Sources */,
 				105F9FDE91EC055120A7F052 /* Frameworks */,
 				5A0F1454F1CEC703F691C9A4 /* Headers */,
-				6F147C551BD32FC74CBFDB20 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DynamicsMac;
+			name = "Dynamics macOS";
 			productName = DynamicsMac;
 			productReference = 9722D8959597602A47B163EF /* Dynamics.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E05D09CD23696B9664B26EB2 /* DynamicsMacTests */ = {
+		E05D09CD23696B9664B26EB2 /* Dynamics macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D30FB1F3C3253CD2659DA401 /* Build configuration list for PBXNativeTarget "DynamicsMacTests" */;
+			buildConfigurationList = D30FB1F3C3253CD2659DA401 /* Build configuration list for PBXNativeTarget "Dynamics macOS Tests" */;
 			buildPhases = (
 				11AADC38015DFCB9A49FF83D /* Sources */,
 				7D43F632634D0414B36EBC7B /* Frameworks */,
 				68D8138D734C3BBA756826C2 /* CopyFiles */,
+				26A2DD3E0453202C88C88932 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E63A5D313BF0040E515C7006 /* PBXTargetDependency */,
 			);
-			name = DynamicsMacTests;
+			name = "Dynamics macOS Tests";
 			productName = DynamicsMacTests;
-			productReference = CD221E5F8D4B18F6CAD04EDC /* DynamicsMacTests.xctest */;
+			productReference = CD221E5F8D4B18F6CAD04EDC /* Dynamics macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -343,7 +331,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					119001770AFA3FB9E7B77C66 = {
+						LastSwiftMigration = 0820;
+					};
+					8219705BB7F3A24DE52EEB06 = {
+						LastSwiftMigration = 0820;
+					};
+				};
 			};
 			buildConfigurationList = 37794CF053576EE5EDB1ECE7 /* Build configuration list for PBXProject "Dynamics" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -357,23 +353,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8219705BB7F3A24DE52EEB06 /* Dynamics */,
-				119001770AFA3FB9E7B77C66 /* DynamicsTests */,
-				94A532E57E7B3CD9E8208112 /* DynamicsMac */,
-				E05D09CD23696B9664B26EB2 /* DynamicsMacTests */,
+				8219705BB7F3A24DE52EEB06 /* Dynamics iOS */,
+				119001770AFA3FB9E7B77C66 /* Dynamics iOS Tests */,
+				94A532E57E7B3CD9E8208112 /* Dynamics macOS */,
+				E05D09CD23696B9664B26EB2 /* Dynamics macOS Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6F147C551BD32FC74CBFDB20 /* ShellScript */ = {
+		0CBF4E2719DCF625E8BF0C59 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/StringTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/ArrayTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Collections.framework",
 			);
 			outputPaths = (
 			);
@@ -381,14 +376,13 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		E6130C410CD7F017FFAA66A0 /* ShellScript */ = {
+		26A2DD3E0453202C88C88932 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ArrayTools.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StringTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Collections.framework",
 			);
 			outputPaths = (
 			);
@@ -412,9 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073F6B881E1BDFD50098AA8E /* Dynamic+Element.swift in Sources */,
 				079847851CD1763F005768A0 /* DynamicFactory.swift in Sources */,
 				0798476D1CD12462005768A0 /* Dynamic.swift in Sources */,
-				079847821CD17514005768A0 /* DynamicElement.swift in Sources */,
+				073F6B8B1E1BDFEF0098AA8E /* DynamicCluster.swift in Sources */,
 				079847701CD12473005768A0 /* DynamicAggregate.swift in Sources */,
 				0798477C1CD124D5005768A0 /* DynamicSequence.swift in Sources */,
 				079847731CD1249D005768A0 /* DynamicInterpolation.swift in Sources */,
@@ -434,9 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073F6B871E1BDFD50098AA8E /* Dynamic+Element.swift in Sources */,
 				079847841CD1763F005768A0 /* DynamicFactory.swift in Sources */,
 				0798476C1CD12462005768A0 /* Dynamic.swift in Sources */,
-				079847811CD17514005768A0 /* DynamicElement.swift in Sources */,
+				073F6B8A1E1BDFEF0098AA8E /* DynamicCluster.swift in Sources */,
 				0798476F1CD12473005768A0 /* DynamicAggregate.swift in Sources */,
 				0798477B1CD124D5005768A0 /* DynamicSequence.swift in Sources */,
 				079847721CD1249D005768A0 /* DynamicInterpolation.swift in Sources */,
@@ -449,13 +445,13 @@
 		9182B0489D840F766037B5DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Dynamics;
-			target = 8219705BB7F3A24DE52EEB06 /* Dynamics */;
+			target = 8219705BB7F3A24DE52EEB06 /* Dynamics iOS */;
 			targetProxy = A8E01258177C21339279B12F /* PBXContainerItemProxy */;
 		};
 		E63A5D313BF0040E515C7006 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DynamicsMac;
-			target = 94A532E57E7B3CD9E8208112 /* DynamicsMac */;
+			target = 94A532E57E7B3CD9E8208112 /* Dynamics macOS */;
 			targetProxy = 5572F36F8B56259890500126 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -474,14 +470,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -503,16 +503,14 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = DynamicsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -521,10 +519,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = DynamicsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
@@ -532,6 +527,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -541,11 +537,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = DynamicsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -559,6 +551,7 @@
 		8A63E69AF225A0396FB5125A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -567,7 +560,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -576,6 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m-Dynamics";
 				PRODUCT_NAME = Dynamics;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -588,14 +581,14 @@
 		A82B0FB5583DB9FA218C9975 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Dynamics/Info.plist;
@@ -603,10 +596,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m-Dynamics";
 				PRODUCT_NAME = Dynamics;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -620,11 +615,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = DynamicsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -637,6 +628,7 @@
 		B8F42882BEBB0C0D63A546FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -646,7 +638,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -655,6 +646,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m-Dynamics";
 				PRODUCT_NAME = Dynamics;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -676,20 +668,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -697,14 +694,14 @@
 		FC0213692378BD955ED5FF5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Dynamics/Info.plist;
@@ -712,9 +709,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m-Dynamics";
 				PRODUCT_NAME = Dynamics;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -724,7 +723,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3605CE3C8F2289E02F286DB9 /* Build configuration list for PBXNativeTarget "Dynamics" */ = {
+		3605CE3C8F2289E02F286DB9 /* Build configuration list for PBXNativeTarget "Dynamics iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC0213692378BD955ED5FF5A /* Release */,
@@ -742,7 +741,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B9880C04E00FB21C7239180 /* Build configuration list for PBXNativeTarget "DynamicsTests" */ = {
+		9B9880C04E00FB21C7239180 /* Build configuration list for PBXNativeTarget "Dynamics iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19371145FC61E3B7381C2A5B /* Release */,
@@ -751,7 +750,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC8C54728CE188CFF0FD0324 /* Build configuration list for PBXNativeTarget "DynamicsMac" */ = {
+		AC8C54728CE188CFF0FD0324 /* Build configuration list for PBXNativeTarget "Dynamics macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8F42882BEBB0C0D63A546FE /* Release */,
@@ -760,7 +759,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D30FB1F3C3253CD2659DA401 /* Build configuration list for PBXNativeTarget "DynamicsMacTests" */ = {
+		D30FB1F3C3253CD2659DA401 /* Build configuration list for PBXNativeTarget "Dynamics macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B6BF13012983806AC1A05579 /* Release */,

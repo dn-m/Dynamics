@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- Structure defining the interpolation between to `Dynamic` objects. Rendered tradiationally as
+ Structure defining the interpolation between to `Dynamic` objects. Rendered traditionally as
  a "hairpin".
  */
 public struct DynamicInterpolation {
@@ -22,23 +22,23 @@ public struct DynamicInterpolation {
         /**
          Crescendo.
          */
-        case Crescendo
+        case crescendo
         
         /**
          Decrescendo.
          */
-        case Decrescendo
+        case decrescendo
         
         /**
          Static.
          */
-        case Static
+        case `static`
         
         /**
          Create a `Direction` with `start` and `stop` `Dynamic` values.
          */
         init(_ start: Dynamic, _ stop: Dynamic) {
-            self = start == stop ? .Static : start < stop ? .Crescendo : .Decrescendo
+            self = start == stop ? .static : start < stop ? .crescendo : .decrescendo
         }
     }
     

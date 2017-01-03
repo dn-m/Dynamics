@@ -6,8 +6,6 @@
 //
 //
 
-import Foundation
-import StringTools
 
 /**
  Structure defining a single instance of a musical dynamic (e.g., f, p, o, mp, mf).
@@ -17,15 +15,25 @@ import StringTools
  One or more `Dynamic` objects are aggregated to create a `DynamicAggregate`.
  */
 public struct Dynamic {
+    
+    
+    
+    
+    
 
     // MARK: - Instance Properties
     
     public var isVirtual: Bool = false
     
-    private let elements: [DynamicElement]
+    fileprivate let elements: [Element]
     
     // MARK: - Initializers
     
+    public init(_ elements: [Element]) {
+        self.elements = elements
+    }
+    
+    /*
     /**
      Create a `Dynamic` with a given `string` value.
      
@@ -47,19 +55,28 @@ public struct Dynamic {
     internal init(verifiedElements: [DynamicElement]) {
         self.elements = verifiedElements
     }
+    */
 }
 
 extension Dynamic {
     
     // MARK: Integer Value
     
-    private var integerValue: Int {
-        if elements == [.Niente] { return Int.min }
-        else if elements == [.Mezzo, .Forte] { return 1 }
-        else if elements == [.Mezzo, .Piano] { return -1 }
-        else if elements.first == .Forte { return elements.count + 1 }
-        else if elements.first == .Piano { return -1 * (elements.count + 1) }
-        return 0
+    fileprivate var integerValue: Int {
+        
+        if elements == [.niete] {
+            return Int.min
+        } else if elements == [.mezzo, .forte] {
+            return 1
+        } else if elements == [.mezzo, .piano] {
+            return -1
+        } else if elements.first == .forte {
+            return elements.count + 1
+        } else if elements.first == .piano {
+            return -1 * (elements.count + 1)
+        }
+        
+        fatalError("Poorly formed Dynamic")
     }
 }
 
@@ -74,10 +91,8 @@ public func == (lhs: Dynamic, rhs: Dynamic) -> Bool {
 
 extension Dynamic: Comparable { }
 
-/**
- - returns: `true` if the left `Dynamic` value is logically less than the right. 
- Otherwise `false`.
- */
+/// - returns: `true` if the left `Dynamic` value is logically less than the right.
+/// Otherwise `false`.
 public func < (lhs: Dynamic, rhs: Dynamic) -> Bool {
     return lhs.integerValue < rhs.integerValue
 }
@@ -85,5 +100,7 @@ public func < (lhs: Dynamic, rhs: Dynamic) -> Bool {
 extension Dynamic: CustomStringConvertible {
     
     /// Printable description
-    public var description: String { return String(elements.map { $0.rawValue }) }
+    public var description: String {
+        return elements.reduce("") { accum, element in accum + element.rawValue }
+    }
 }

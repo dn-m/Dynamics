@@ -6,25 +6,25 @@
 //
 //
 
-import Foundation
-import ArrayTools
-import StringTools
+import Collections
 
+/*
+// TODO: Refactor (not really a Factory...)
 internal class DynamicFactory {
     
     // TODO: refine cases
-    internal enum Error: ErrorType {
-        case InvalidString(String)
-        case Empty(String)
-        case TooManyCharacters(String)
-        case InvalidCharacter(String)
-        case InvalidElements(String)
+    internal enum Error: Swift.Error {
+        case invalidString(String)
+        case empty(String)
+        case tooManyCharacters(String)
+        case invalidCharacter(String)
+        case invalidElements(String)
     }
     
     // TODO: isVirtual
     // TODO: isSubito
 
-    private var string: String = ""
+    fileprivate var string: String = ""
     
     internal init() { }
     
@@ -40,35 +40,35 @@ internal class DynamicFactory {
         return Dynamic(verifiedElements: verifiedElements)
     }
     
-    private func verifyElements(elements: [DynamicElement]) throws -> [DynamicElement] {
+    fileprivate func verifyElements(_ elements: [DynamicElement]) throws -> [DynamicElement] {
        
         guard let (head, tail) = elements.destructured else {
-            throw Error.InvalidString(string)
+            throw Error.invalidString(string)
         }
         
         switch head {
-        case .Mezzo: try ensureNextPianoOrForte(forElements: tail)
-        case .Forte, .Piano: try ensureHomogeneous(elements)
-        case .Niente: try ensureEmpty(elements: tail)
+        case .mezzo: try ensureNextPianoOrForte(forElements: tail)
+        case .forte, .piano: try ensureHomogeneous(elements)
+        case .niete: try ensureEmpty(elements: tail)
         }
         
         return elements
     }
     
-    private func ensureEmpty(elements elements: [DynamicElement]) throws {
-        if !elements.isEmpty { throw Error.InvalidString(string) }
+    fileprivate func ensureEmpty(elements: [DynamicElement]) throws {
+        if !elements.isEmpty { throw Error.invalidString(string) }
     }
     
-    private func ensureNextPianoOrForte(forElements elements: [DynamicElement]) throws {
-        guard let next = elements.first else { throw Error.InvalidString(string) }
+    fileprivate func ensureNextPianoOrForte(forElements elements: [DynamicElement]) throws {
+        guard let next = elements.first else { throw Error.invalidString(string) }
         switch next {
-        case .Piano, .Forte: break
-        default: throw Error.InvalidString(string)
+        case .piano, .forte: break
+        default: throw Error.invalidString(string)
         }
     }
     
-    private func ensureHomogeneous(elements: [DynamicElement]) throws {
-        if elements.isHeterogeneous { throw Error.InvalidString(string) }
+    fileprivate func ensureHomogeneous(_ elements: [DynamicElement]) throws {
+        if elements.isHeterogeneous { throw Error.invalidString(string) }
     }
     
     /*
@@ -85,13 +85,14 @@ internal class DynamicFactory {
     }
     */
     
-    private func makeUnverifiedElements(withString string: String) throws -> [DynamicElement] {
+    fileprivate func makeUnverifiedElements(withString string: String) throws -> [DynamicElement] {
         let result = string.characters.flatMap { DynamicElement(rawValue: String($0)) }
-        if result.count != string.characters.count { throw Error.InvalidString(string) }
+        if result.count != string.characters.count { throw Error.invalidString(string) }
         return result
     }
     
-    private func ensureNotEmpty(string string: String) throws {
-        if string.characters.count == 0 { throw Error.Empty(string) }
+    fileprivate func ensureNotEmpty(string: String) throws {
+        if string.characters.count == 0 { throw Error.empty(string) }
     }
 }
+*/
