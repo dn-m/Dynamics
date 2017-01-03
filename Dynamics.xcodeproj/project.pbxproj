@@ -18,12 +18,10 @@
 		0752A51E1CD690A7007C25AB /* DynamicInterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */; };
 		0798476C1CD12462005768A0 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798476B1CD12462005768A0 /* Dynamic.swift */; };
 		0798476D1CD12462005768A0 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798476B1CD12462005768A0 /* Dynamic.swift */; };
-		079847721CD1249D005768A0 /* DynamicInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847711CD1249D005768A0 /* DynamicInterpolation.swift */; };
-		079847731CD1249D005768A0 /* DynamicInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847711CD1249D005768A0 /* DynamicInterpolation.swift */; };
+		079847721CD1249D005768A0 /* Dynamic+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847711CD1249D005768A0 /* Dynamic+Interpolation.swift */; };
+		079847731CD1249D005768A0 /* Dynamic+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847711CD1249D005768A0 /* Dynamic+Interpolation.swift */; };
 		079847781CD124C4005768A0 /* DynamicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847771CD124C4005768A0 /* DynamicTests.swift */; };
 		079847791CD124C4005768A0 /* DynamicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079847771CD124C4005768A0 /* DynamicTests.swift */; };
-		0798477B1CD124D5005768A0 /* DynamicSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798477A1CD124D5005768A0 /* DynamicSequence.swift */; };
-		0798477C1CD124D5005768A0 /* DynamicSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0798477A1CD124D5005768A0 /* DynamicSequence.swift */; };
 		1F1F33EA2AE816548FC2EA67 /* Dynamics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF4BADFC729B07F14AE50AF8 /* Dynamics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2141448BD780B73BA5765704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37556252B34CF6ABBFE9964B /* Foundation.framework */; };
 		36480E49FCF3F9612B621681 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F2AA465D724796948719 /* Cocoa.framework */; };
@@ -79,9 +77,8 @@
 		073F6B8C1E1BE2920098AA8E /* Dynamic+Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dynamic+Validator.swift"; path = "Dynamics/Dynamic+Validator.swift"; sourceTree = "<group>"; };
 		0752A51C1CD690A7007C25AB /* DynamicInterpolationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicInterpolationTests.swift; path = DynamicsTests/DynamicInterpolationTests.swift; sourceTree = "<group>"; };
 		0798476B1CD12462005768A0 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dynamic.swift; path = Dynamics/Dynamic.swift; sourceTree = "<group>"; };
-		079847711CD1249D005768A0 /* DynamicInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicInterpolation.swift; path = Dynamics/DynamicInterpolation.swift; sourceTree = "<group>"; };
+		079847711CD1249D005768A0 /* Dynamic+Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dynamic+Interpolation.swift"; path = "Dynamics/Dynamic+Interpolation.swift"; sourceTree = "<group>"; };
 		079847771CD124C4005768A0 /* DynamicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicTests.swift; path = DynamicsTests/DynamicTests.swift; sourceTree = "<group>"; };
-		0798477A1CD124D5005768A0 /* DynamicSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicSequence.swift; path = Dynamics/DynamicSequence.swift; sourceTree = "<group>"; };
 		2B8B387CF27BDABB52598D5D /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
 		37556252B34CF6ABBFE9964B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		59CD7B222D8E4BE83016AE70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = DynamicsTests/Info.plist; sourceTree = "<group>"; };
@@ -163,8 +160,7 @@
 				073F6B8C1E1BE2920098AA8E /* Dynamic+Validator.swift */,
 				073F6B861E1BDFD50098AA8E /* Dynamic+Element.swift */,
 				073F6B891E1BDFEF0098AA8E /* Dynamic+Cluster.swift */,
-				079847711CD1249D005768A0 /* DynamicInterpolation.swift */,
-				0798477A1CD124D5005768A0 /* DynamicSequence.swift */,
+				079847711CD1249D005768A0 /* Dynamic+Interpolation.swift */,
 			);
 			name = Dynamics;
 			sourceTree = "<group>";
@@ -406,8 +402,7 @@
 				073F6B881E1BDFD50098AA8E /* Dynamic+Element.swift in Sources */,
 				0798476D1CD12462005768A0 /* Dynamic.swift in Sources */,
 				073F6B8B1E1BDFEF0098AA8E /* Dynamic+Cluster.swift in Sources */,
-				0798477C1CD124D5005768A0 /* DynamicSequence.swift in Sources */,
-				079847731CD1249D005768A0 /* DynamicInterpolation.swift in Sources */,
+				079847731CD1249D005768A0 /* Dynamic+Interpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,8 +423,7 @@
 				073F6B871E1BDFD50098AA8E /* Dynamic+Element.swift in Sources */,
 				0798476C1CD12462005768A0 /* Dynamic.swift in Sources */,
 				073F6B8A1E1BDFEF0098AA8E /* Dynamic+Cluster.swift in Sources */,
-				0798477B1CD124D5005768A0 /* DynamicSequence.swift in Sources */,
-				079847721CD1249D005768A0 /* DynamicInterpolation.swift in Sources */,
+				079847721CD1249D005768A0 /* Dynamic+Interpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
