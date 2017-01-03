@@ -6,31 +6,32 @@
 //
 //
 
-
 /**
- Structure defining a single instance of a musical dynamic (e.g., f, p, o, mp, mf).
+ Structure defining a single instance of a musical dynamic (e.g., f, p, o, mp, mf, ppp).
  
- One or more `Dynamic.Element` objects are aggregated to create a `Dynamic`.
- 
- One or more `Dynamic` objects are aggregated to create a `Dynamic.Cluster`.
+ - One or more `Dynamic.Element` objects are aggregated to create a `Dynamic`.
+ - One or more `Dynamic` objects are aggregated to create a `Dynamic.Cluster`.
  */
 public struct Dynamic {
 
     // MARK: - Instance Properties
     
-    public var isVirtual: Bool = false
+    public let isSubito: Bool
+    public let isVirtual: Bool
     
     fileprivate let elements: [Element]
     
     // MARK: - Initializers
     
-    public init(_ elements: [Element]) {
+    public init(_ elements: [Element], isSubito: Bool = false, isVirtual: Bool = false) {
         
         guard Validator.elementsAreWellFormed(elements) else {
             fatalError("Elements are not well-formed!")
         }
         
         self.elements = elements
+        self.isSubito = isSubito
+        self.isVirtual = isVirtual
     }
 }
 
