@@ -16,13 +16,17 @@ public struct Dynamic {
 
     // MARK: - Instance Properties
     
+    /// Whether or not `Dynamic` is suddenly effective.
     public let isSubito: Bool
+    
+    /// Whether or not `Dynamic` is virtual (not visually represented).
     public let isVirtual: Bool
     
     fileprivate let elements: [Element]
     
     // MARK: - Initializers
     
+    /// Create a `Dynamic` with given `elements`, and whether it `isSubito` and/or `isVirtual`
     public init(_ elements: [Element], isSubito: Bool = false, isVirtual: Bool = false) {
         
         guard Validator.elementsAreWellFormed(elements) else {
@@ -36,8 +40,6 @@ public struct Dynamic {
 }
 
 extension Dynamic {
-    
-    // MARK: Integer Value
     
     fileprivate var integerValue: Int {
         
@@ -57,22 +59,32 @@ extension Dynamic {
     }
 }
 
-extension Dynamic: Equatable { }
-
-/// - returns: `true` if two `Dynamic` values are logically equivalent. Otherwise `false`.
-public func == (lhs: Dynamic, rhs: Dynamic) -> Bool {
-    return lhs.integerValue == rhs.integerValue
+extension Dynamic: Equatable {
+    
+    // MARK: - `Equatable`
+    
+    /// - returns: `true` if two `Dynamic` values are logically equivalent. Otherwise `false`.
+    public static func == (lhs: Dynamic, rhs: Dynamic) -> Bool {
+        return lhs.integerValue == rhs.integerValue
+    }
 }
 
-extension Dynamic: Comparable { }
 
-/// - returns: `true` if the left `Dynamic` value is logically less than the right.
-/// Otherwise `false`.
-public func < (lhs: Dynamic, rhs: Dynamic) -> Bool {
-    return lhs.integerValue < rhs.integerValue
+extension Dynamic: Comparable {
+
+    // MARK: - `Comparable`
+    
+    /// - returns: `true` if the left `Dynamic` value is logically less than the right.
+    /// Otherwise `false`.
+    public static func < (lhs: Dynamic, rhs: Dynamic) -> Bool {
+        return lhs.integerValue < rhs.integerValue
+    }
 }
+
 
 extension Dynamic: CustomStringConvertible {
+    
+    // MARK: - `CustomStringConvertible`
     
     /// Printable description
     public var description: String {
