@@ -19,8 +19,8 @@ extension Dynamic {
         /// Piano. Initialize with the `rawValue` `"p"`.
         case piano = "p"
         
-        /// Niete. Initialize with the `rawValue` `"o"`.
-        case niete = "o"
+        /// Niente. Initialize with the `rawValue` `"o"`.
+        case niente = "o"
         
         /// Mezzo. Initialize with the `rawValue` `"m"`.
         case mezzo = "m"

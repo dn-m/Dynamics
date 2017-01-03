@@ -15,7 +15,6 @@
  One or more `Dynamic` objects are aggregated to create a `Dynamic.Cluster`.
  */
 public struct Dynamic {
-    
 
     // MARK: - Instance Properties
     
@@ -26,6 +25,11 @@ public struct Dynamic {
     // MARK: - Initializers
     
     public init(_ elements: [Element]) {
+        
+        guard Validator.elementsAreWellFormed(elements) else {
+            fatalError("Elements are not well-formed!")
+        }
+        
         self.elements = elements
     }
 }
@@ -36,7 +40,7 @@ extension Dynamic {
     
     fileprivate var integerValue: Int {
         
-        if elements == [.niete] {
+        if elements == [.niente] {
             return Int.min
         } else if elements == [.mezzo, .forte] {
             return 1
@@ -54,9 +58,7 @@ extension Dynamic {
 
 extension Dynamic: Equatable { }
 
-/**
- - returns: `true` if two `Dynamic` values are logically equivalent. Otherwise `false`.
- */
+/// - returns: `true` if two `Dynamic` values are logically equivalent. Otherwise `false`.
 public func == (lhs: Dynamic, rhs: Dynamic) -> Bool {
     return lhs.integerValue == rhs.integerValue
 }
