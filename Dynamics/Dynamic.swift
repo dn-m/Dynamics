@@ -10,15 +10,11 @@
 /**
  Structure defining a single instance of a musical dynamic (e.g., f, p, o, mp, mf).
  
- One or more `DynamicElement` objects are aggregated to create a `Dynamic`.
+ One or more `Dynamic.Element` objects are aggregated to create a `Dynamic`.
  
- One or more `Dynamic` objects are aggregated to create a `DynamicAggregate`.
+ One or more `Dynamic` objects are aggregated to create a `Dynamic.Cluster`.
  */
 public struct Dynamic {
-    
-    
-    
-    
     
 
     // MARK: - Instance Properties
