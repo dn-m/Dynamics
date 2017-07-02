@@ -15,34 +15,22 @@
 public struct Dynamic {
 
     // MARK: - Instance Properties
-    
-    /// Whether or not `Dynamic` is suddenly effective.
-    public let isSubito: Bool
-    
-    /// Whether or not `Dynamic` is virtual (not visually represented).
-    public let isVirtual: Bool
-    
-    fileprivate let elements: [Element]
+
+    internal let elements: [Element]
     
     // MARK: - Initializers
-    
-    /// Create a `Dynamic` with given `elements`, and whether it `isSubito` and/or `isVirtual`
-    public init(_ elements: [Element], isSubito: Bool = false, isVirtual: Bool = false) {
-        
-        guard Validator.elementsAreWellFormed(elements) else {
-            fatalError("Elements are not well-formed!")
-        }
-        
+
+    /// Create a `Dynamic` with a sequence of `Dynamic.Element` values.
+    public init <S: Sequence> (_ elements: S) where S.Iterator.Element == Element {
+        let elements = Array(elements)
+        precondition(Validator.elementsAreWellFormed(elements))
         self.elements = elements
-        self.isSubito = isSubito
-        self.isVirtual = isVirtual
     }
 }
 
 extension Dynamic {
     
-    fileprivate var integerValue: Int {
-        
+    public var integerValue: Int {
         if elements == [.niente] {
             return Int.min
         } else if elements == [.mezzo, .forte] {
@@ -69,7 +57,6 @@ extension Dynamic: Equatable {
     }
 }
 
-
 extension Dynamic: Comparable {
 
     // MARK: - `Comparable`
@@ -80,7 +67,6 @@ extension Dynamic: Comparable {
         return lhs.integerValue < rhs.integerValue
     }
 }
-
 
 extension Dynamic: CustomStringConvertible {
     
